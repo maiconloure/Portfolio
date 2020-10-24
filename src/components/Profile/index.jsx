@@ -1,63 +1,45 @@
-import React from "react";
-import styled from "styled-components";
-import photo from "../../assets/photo.png";
+import React from 'react';
+import styled from 'styled-components';
+import photo from '../../assets/photo.png';
 
 const ProfileBox = () => {
   return (
     <ProfileContainer>
-      <Image src="https://avatars3.githubusercontent.com/u/59097467?s=460&u=f8ceaa740a7c8d29c510f150118d3f044e3c2351&v=4" />
+      <Image src={photo} />
       <Info>
         <h1>Maicon Lourenço</h1>
         <p>Front-End Developer</p>
         <Line />
 
         <Box1>
-          <img
-            src="https://img.icons8.com/fluent/48/000000/company.png"
-            alt="course company"
-          />
+          <img src="https://img.icons8.com/fluent/48/000000/company.png" alt="course company" />
           Kenzie Academy
         </Box1>
         <Box1>
-          <img
-            src="https://img.icons8.com/color/48/000000/worldwide-location.png"
-            alt="location"
-          />
+          <img src="https://img.icons8.com/color/48/000000/worldwide-location.png" alt="location" />
           Santa Catarina, Brazil
         </Box1>
         <Box1>
           <a href="https://www.github.com/maiconloure/">
-            <img
-              src="https://img.icons8.com/fluent/48/000000/gmail.png"
-              alt="gmail"
-            />
+            <img src="https://img.icons8.com/fluent/48/000000/gmail.png" alt="gmail" />
             maiconloure@gmail.com
           </a>
         </Box1>
         <Box1>
           <a href="https://www.github.com/maiconloure/">
-            <img
-              src="https://img.icons8.com/fluent/48/000000/github.png"
-              alt="github"
-            />
+            <img src="https://img.icons8.com/fluent/48/000000/github.png" alt="github" />
             github.com/maiconloure
           </a>
         </Box1>
         <Box1>
           <a href="https://www.linkedin.com/in/maiconlourenco/">
-            <img
-              src="https://img.icons8.com/color/48/000000/gitlab.png"
-              alt="gitlab"
-            />
+            <img src="https://img.icons8.com/color/48/000000/gitlab.png" alt="gitlab" />
             gitlab.com/maiconlourenco
           </a>
         </Box1>
         <Box1>
           <a href="https://www.linkedin.com/in/maiconlourenco/">
-            <img
-              src="https://img.icons8.com/fluent/48/000000/linkedin.png"
-              alt="linkedin"
-            />
+            <img src="https://img.icons8.com/fluent/48/000000/linkedin.png" alt="linkedin" />
             linkedin.com/in/maiconlourenco/
           </a>
         </Box1>
@@ -66,12 +48,8 @@ const ProfileBox = () => {
           <a
             href="https://drive.google.com/file/d/1_lliNJpcBYb64pIBoJNUEql5pgsOrFro/view?usp=sharing"
             target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="https://img.icons8.com/fluent/48/000000/pdf.png"
-              alt="pdf-curriculum"
-            />
+            rel="noopener noreferrer">
+            <img src="https://img.icons8.com/fluent/48/000000/pdf.png" alt="pdf-curriculum" />
             <div className="tooltiptext">Visualizar currículo completo</div>
           </a>
         </Curriculum>
