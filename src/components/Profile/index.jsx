@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import photo from "../../assets/photo.png";
+
 const ProfileBox = () => {
   return (
     <ProfileContainer>
@@ -62,11 +63,17 @@ const ProfileBox = () => {
         </Box1>
 
         <Curriculum>
-          <img
-            src="https://img.icons8.com/fluent/48/000000/pdf.png"
-            alt="pdf-curriculum"
-          />
-          <div className="tooltiptext">Visualizar currículo completo</div>
+          <a
+            href="https://drive.google.com/file/d/1_lliNJpcBYb64pIBoJNUEql5pgsOrFro/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://img.icons8.com/fluent/48/000000/pdf.png"
+              alt="pdf-curriculum"
+            />
+            <div className="tooltiptext">Visualizar currículo completo</div>
+          </a>
         </Curriculum>
       </Info>
     </ProfileContainer>
@@ -76,19 +83,21 @@ const ProfileBox = () => {
 export default ProfileBox;
 
 const ProfileContainer = styled.div`
-  grid-area: profileBox;
+  margin: 10px;
   position: relative;
   background: #3b3784;
-  padding: 10px;
+  padding: 16px;
   border-radius: 4px;
   width: 260px;
-  min-height: 500px;
+  min-height: 490px;
   box-shadow: 0 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   transition: 0.3s;
+
   :hover {
-    box-shadow: 0 0 1px 8px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 1px 8px rgba(25, 25, 112, 0.3);
+    transform: scale(1.04);
   }
 `;
 
@@ -100,11 +109,11 @@ const Image = styled.img`
 `;
 
 const Info = styled.div`
+  color: #fff;
   h1 {
     font: 700 1.8rem Inter;
     margin: 0;
   }
-
   p {
     font: 500 1.2rem Inter;
     margin: 0;
@@ -112,7 +121,8 @@ const Info = styled.div`
 `;
 
 const Line = styled.div`
-  border-bottom: 3px solid #000;
+  border-bottom: 3px solid #fff;
+  width: 194px;
   margin: 5px 0;
 `;
 
@@ -129,16 +139,20 @@ const Box1 = styled.div`
   a {
     font: 400 0.9rem Inter;
     text-decoration: none;
-    color: #000;
+    color: #fff;
     display: flex;
     align-items: center;
+
+    :hover {
+      color: #000;
+    }
   }
 `;
 
 const Curriculum = styled.div`
   position: absolute;
   top: 230px;
-  left: 230px;
+  left: 240px;
   .tooltiptext {
     font: 500 1rem Inter;
     visibility: hidden;
@@ -154,7 +168,7 @@ const Curriculum = styled.div`
 
   :hover {
     .tooltiptext {
-      transition-delay: 0.4s;
+      transition-delay: 0.3s;
       visibility: visible;
     }
   }
