@@ -1,18 +1,18 @@
-import React from "react";
-import styled from "styled-components";
-import ToolTip from "../ToolTip";
+import React from 'react';
+import styled from 'styled-components';
+import ToolTip from '../ToolTip';
 
-import html5 from "../../assets/html5.png";
-import css from "../../assets/css3.png";
-import javascript from "../../assets/javascript.png";
-import typescript from "../../assets/typescript.png";
-import jest from "../../assets/jest.png";
-import webpack from "../../assets/webpack.png";
-import react from "../../assets/react.png";
-import redux from "../../assets/redux.png";
-import node from "../../assets/node.png";
-import python from "../../assets/python.png";
-import git from "../../assets/git.png";
+import html5 from '../../assets/icons/html5.png';
+import css from '../../assets/icons/css3.png';
+import javascript from '../../assets/icons/javascript.png';
+import typescript from '../../assets/icons/typescript.png';
+import jest from '../../assets/icons/jest.png';
+import webpack from '../../assets/icons/webpack.png';
+import react from '../../assets/icons/react.png';
+import redux from '../../assets/icons/redux.png';
+import node from '../../assets/icons/node.png';
+import python from '../../assets/icons/python.png';
+import git from '../../assets/icons/git.png';
 
 const Skills = () => (
   <SkillsContainer>
@@ -34,7 +34,7 @@ const Skills = () => (
         <Icon src={react} alt="React Logo" />
       </ToolTip>
       <ToolTip tooltiptext="Redux">
-        <Icon src={redux} alt="Redux Logo" style={{ width: "50px" }} />
+        <Icon src={redux} alt="Redux Logo" style={{ width: '50px' }} />
       </ToolTip>
       <ToolTip tooltiptext="Jest">
         <Icon src={jest} alt="Jest Logo" />

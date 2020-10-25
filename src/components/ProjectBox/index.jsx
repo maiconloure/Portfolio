@@ -1,34 +1,86 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import { ProjectsInfo } from './projects-info';
+import {
+  Timeless,
+  BookBook,
+  UserRegistration,
+  Lig4,
+  PhotosFromHere,
+  HanoiTower,
+  Labyrint,
+  Magic8Ball,
+} from './projects-info';
 import { motion, useAnimation } from 'framer-motion';
 
-const ProjectBox = ({ title, handleCloseBox, projectBox }) => {
-  const currentProject = ProjectsInfo.filter((project) => project.title === title);
+const ProjectBox = ({ handleCloseBox, project }) => {
   const controls = useAnimation();
-  console.log(projectBox);
+
+  const scrollTop = () => {
+    window.scrollTo({ top: project.position, behavior: 'smooth' });
+  };
 
   controls.start({
     x: '-94%',
-    backgroundColor: '#0074d9',
-    transition: { duration: 0.5 },
+    backgroundColor: project.color,
+    transition: { duration: 0.3 },
     type: 'spring',
     opacity: 1,
   });
 
   useEffect(() => {
-    if (!projectBox) {
+    if (!project) {
       controls.start({
         opacity: 0,
         x: '100%',
-        transition: { delay: 0.3 },
+        transition: { duration: 0.3 },
       });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [projectBox]);
+  }, [project]);
+
+  const currentProject = () => {
+    let currentProject;
+    switch (project.title) {
+      case 'Timeless':
+        currentProject = () => <Timeless backTop={scrollTop} />;
+        return <Timeless backTop={scrollTop} />;
+
+      case 'BookBook':
+        currentProject = () => <BookBook backTop={scrollTop} />;
+        return <BookBook backTop={scrollTop} />;
+
+      case 'User-Registration':
+        currentProject = () => <UserRegistration backTop={scrollTop} />;
+        return <UserRegistration backTop={scrollTop} />;
+
+      case 'Lig4':
+        currentProject = () => <Lig4 backTop={scrollTop} />;
+        return <Lig4 backTop={scrollTop} />;
+
+      case 'Photos from Here':
+        currentProject = () => <PhotosFromHere backTop={scrollTop} />;
+        return <PhotosFromHere backTop={scrollTop} />;
+
+      case 'Torre de Hanoi':
+        currentProject = () => <HanoiTower backTop={scrollTop} />;
+        return <HanoiTower backTop={scrollTop} />;
+
+      case 'Labyrint':
+        currentProject = () => <Labyrint backTop={scrollTop} />;
+        return <Labyrint backTop={scrollTop} />;
+
+      case 'Magic 8 Ball':
+        currentProject = () => <Magic8Ball backTop={scrollTop} />;
+        return <Magic8Ball backTop={scrollTop} />;
+
+      default:
+        return currentProject;
+    }
+  };
 
   return (
     <ProjectContainer
+      style={{ top: project.position ? project.position : '0' }}
       initial="pageInitial"
       animate={controls}
       variants={{
@@ -36,29 +88,12 @@ const ProjectBox = ({ title, handleCloseBox, projectBox }) => {
           opacity: 0,
         },
       }}>
-      {projectBox && (
-        <>
-          <Title>
-            <h2>{currentProject[0].title}</h2>
-          </Title>
-          <SubTitle>
-            <h3>{currentProject[0].slogan}</h3>
-          </SubTitle>
-          <Description>
-            <p>{currentProject[0].description}</p>
-          </Description>
-          <ImagesTimeline>
-            {currentProject[0].images.map((image, index) => (
-              <img src={image} key={index} alt="Project" />
-            ))}
-          </ImagesTimeline>
+      {project && currentProject()}
 
-          <Return onClick={() => handleCloseBox()}>
-            <p>Voltar</p>
-            <img src="https://img.icons8.com/fluent/48/000000/right.png" alt="voltar" />
-          </Return>
-        </>
-      )}
+      <Return onClick={() => handleCloseBox()}>
+        <p>Voltar</p>
+        <img src="https://img.icons8.com/fluent/48/000000/right.png" alt="voltar" />
+      </Return>
     </ProjectContainer>
   );
 };
@@ -67,54 +102,26 @@ export default ProjectBox;
 
 const ProjectContainer = styled(motion.div)`
   position: absolute;
-  z-index: 999999;
-  top: 0;
+  z-index: 99999;
   left: 100%;
   width: 100%;
-  min-height: 100%;
   margin: 16px;
   background: #2a3990;
   padding: 40px 60px;
-  border-radius: 5px;
+  border-radius: 6px;
   box-shadow: 0 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   transition: 0.3s;
 `;
 
-const Title = styled.div`
-  h2 {
-    font: 700 3rem Inter;
-    color: #fff;
-    margin: 4px;
-  }
-`;
-const SubTitle = styled.div`
-  h3 {
-    font: 600 1.5rem Inter;
-    color: #fff;
-  }
-`;
-const Description = styled.div`
-  width: 90%;
-  p {
-    font: 400 0.9rem Inter;
-    color: #fff;
-  }
-`;
-
-const ImagesTimeline = styled.div`
-  img {
-    width: 80%;
-  }
-`;
-
 const Return = styled.div`
   position: absolute;
-  top: 10px;
+  top: 20px;
   left: 84%;
   display: flex;
   align-items: center;
+  transition: 0.2s;
   cursor: pointer;
 
   p {
@@ -127,5 +134,9 @@ const Return = styled.div`
   img {
     width: 40px;
     height: 40px;
+  }
+
+  :hover {
+    transform: scale(1.2);
   }
 `;

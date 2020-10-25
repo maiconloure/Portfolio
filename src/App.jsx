@@ -4,26 +4,32 @@ import ProfileBox from './components/Profile';
 import Skills from './components/Skills';
 import Description from './components/Description';
 import DefaultCard from './components/DefaultCard';
-import TimelessFrame from './assets/image.png';
-import BookBookImage from './assets/bookbook.png';
-import lig4Image from './assets/lig4.png';
-import UserRegistration from './assets/user-registration.png';
+import TimelessFrame from './assets/timeless/landing.png';
+import BookBookImage from './assets/bookbook/bookbook.png';
+import lig4Image from './assets/lig4/lig4.png';
+import UserRegistration from './assets/user-registration/user-registration.png';
 import photos from './assets/photos.png';
 import magicball from './assets/magicball.png';
-import hanoi from './assets/hanoi.png';
+import hanoi from './assets/hanoi/hanoi.png';
 import labyrint from './assets/labyrint.png';
 import ProjectBox from './components/ProjectBox';
 
 const App = () => {
-  const [projectBox, setProjectBox] = useState(false);
+  const [project, setProject] = useState(false);
 
-  const handleBox = (project) => {
-    setProjectBox(project);
+  const handleBox = (evt, project, color) => {
+    setProject({
+      title: project,
+      position: evt.currentTarget.offsetTop,
+      color: color,
+    });
   };
 
   const handleCloseBox = () => {
-    setProjectBox(false);
+    setProject(false);
   };
+
+  console.log(project.position);
 
   return (
     <AppContainer>
@@ -36,21 +42,40 @@ const App = () => {
             image={BookBookImage}
             handleBox={handleBox}
           />
-          <DefaultCard title="Photos from Here" image={photos} handleBox={handleBox} />
-          <DefaultCard title="Magic 8 Ball" image={magicball} handleBox={handleBox} />
-          <DefaultCard title="Torre de Hanoi" image={hanoi} handleBox={handleBox} />
+          <DefaultCard color="#483D8B" title="Lig4" image={lig4Image} handleBox={handleBox} />
+          <DefaultCard color="#4169E1" title="Torre de Hanoi" image={hanoi} handleBox={handleBox} />
+          <DefaultCard
+            color="#020E36"
+            title="Magic 8 Ball"
+            image={magicball}
+            handleBox={handleBox}
+          />
         </ColumnOne>
         <ColumnTwo>
           <Skills />
           <Description />
-          <DefaultCard title="Timeless" image={TimelessFrame} handleBox={handleBox} />
-          <DefaultCard title="Lig-4" image={lig4Image} handleBox={handleBox} />
+          <DefaultCard
+            color="#2a3990"
+            title="Timeless"
+            image={TimelessFrame}
+            handleBox={handleBox}
+          />
+          <DefaultCard
+            color="#080877"
+            title="User-Registration"
+            image={UserRegistration}
+            handleBox={handleBox}
+          />
+          <DefaultCard
+            color="#00008B"
+            title="Photos from Here"
+            image={photos}
+            handleBox={handleBox}
+          />
 
-          <DefaultCard title="User-Registration" image={UserRegistration} handleBox={handleBox} />
-          <DefaultCard title="Labyrint" image={labyrint} handleBox={handleBox} />
+          <DefaultCard color="#276040" title="Labyrint" image={labyrint} handleBox={handleBox} />
         </ColumnTwo>
-
-        <ProjectBox title={projectBox} handleCloseBox={handleCloseBox} projectBox={projectBox} />
+        {project && <ProjectBox project={project} handleCloseBox={handleCloseBox} />}
       </PortfolioContainer>
     </AppContainer>
   );
@@ -70,7 +95,7 @@ const PortfolioContainer = styled.div`
   display: flex;
   align-content: stretch;
   position: relative;
-  overflow: hidden;
+  z-index: 1;
 `;
 
 const ColumnOne = styled.div`

@@ -1,24 +1,27 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Description = () => (
   <DescriptionContainer>
     <InnerBox>
       <p>
-        Possuo mais de 6 anos de estudo em áreas da tecnologia, comecei com
-        design, web design e realizei alguns trabalhos como freelancer, após
-        isso segui para a área da computação gráfica, onde obtive grandes
-        experiências, e realizei grandes trabalhos que hoje estão no meu
-        portfólio. Autodidata, disciplinado e organizado, sempre me dedicando ao
-        máximo, entregando o meu melhor. Comecei a estudar programação em meados
-        de 2018, quando decidi mudar de carreira, inciei os estudos com Python,
-        Javascript e MySQL por quase 2 anos até conhecer a Kenzie Academy. Hoje
-        curso desenvolvimento Full Stack, onde trabalho com as tecnologias e
-        práticas mais atuais do mercado, HTML5, CSS3, Javascript, Typescript,
-        ReactJs, Redux, e testes unitários. Coloco tudo isso em prática, em
-        incríveis trabalhos em equipe, que desenvolvem muito minhas softskills e
-        hardskills, tenho grande habilidade em front-end e back-end em meus
-        trabalhos.
+        Olá, Sou um grande entusiasta do conhecimento e tecnologia, tenho mais de 6 anos de estudos
+        em áreas da tecnologia, comecei como Design, Web Design e realizei alguns trabalhos como
+        Freelancer, após alguns anos, decidi seguir para a área da computação gráfica, onde obtive
+        excelentes experiências, e realizei diversos trabalhos que hoje estão em meu portfólio.
+        Autodidata, Disciplinado e organizado, sempre me dedicando ao máximo, entregando o meu
+        melhor. Comecei a estudar programação em 2018, onde iniciei os estudos com Python e
+        Javascript por quase 2 anos, quando decidi entrar com tudo no mundo da programação, e acabei
+        conhecendo a Kenzie Academy Brasil. Hoje curso desenvolvimento Full Stack, onde trabalho com
+        as tecnologias e práticas mais atuais do mercado, HTML5, CSS3, Javascript, Typescript,
+        ReactJs, Redux, testes unitários, integração, end-to-end, git, Python, banco de dados, e
+        etc. Coloco tudo isso em prática, em incríveis trabalhos em equipe, que desenvolvem muito
+        minhas soft skills e hard skills, tenho grande habilidade tanto em front-end quanto em
+        back-end em meus trabalhos, código sempre limpo, e aplicando teste sempre que recomendável.
+        <br />
+        Minhas áreas de interesse atualmente são: Desenvolvimento nativo, Bancos de
+        dados(especialmete não relacional), Inteligência Artificial, Machine Learning e Data
+        Science.
       </p>
     </InnerBox>
   </DescriptionContainer>

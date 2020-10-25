@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const DefaultCard = ({ color, title, image, handleBox }) => (
-  <CardContainer style={{ background: color }} onClick={() => handleBox(title)}>
-    {/* <Title>{title}</Title> */}
+  <CardContainer style={{ background: color }} onClick={(evt) => handleBox(evt, title, color)}>
+    <Title className="title">{title}</Title>
     <Image src={image} />
   </CardContainer>
 );
@@ -15,7 +15,6 @@ const CardContainer = styled.div`
   position: relative;
   background: #3b3784;
   padding: 10px;
-  /* padding-top: 4px; */
   border-radius: 2px;
   box-shadow: 0 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -30,7 +29,8 @@ const CardContainer = styled.div`
 `;
 const Title = styled.h2`
   font: 700 2rem Inter;
-  margin: 4px;
+  margin: 0px 4px;
+  margin-bottom: 2px;
   color: #fff;
 `;
 const Image = styled.img`
