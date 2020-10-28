@@ -46,7 +46,7 @@ const ProfileBox = () => {
 
         <Curriculum>
           <a
-            href="https://drive.google.com/file/d/1_lliNJpcBYb64pIBoJNUEql5pgsOrFro/view?usp=sharing"
+            href="https://drive.google.com/file/d/15DkkGdGOwchh0uRRhlsbXUjnUGdoD6WE/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer">
             <img src="https://img.icons8.com/fluent/48/000000/pdf.png" alt="pdf-curriculum" />
