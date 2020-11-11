@@ -32,7 +32,7 @@ const ProfileBox = () => {
           </a>
         </Box1>
         <Box1>
-          <a href="https://www.linkedin.com/in/maiconlourenco/">
+          <a href="https://gitlab.com/maiconlourenco">
             <img src="https://img.icons8.com/color/48/000000/gitlab.png" alt="gitlab" />
             gitlab.com/maiconlourenco
           </a>
