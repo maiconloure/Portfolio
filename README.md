@@ -6,5 +6,3 @@
 > Visit on  https://maiconlourenco.vercel.app/
 
 <br/>
-
-### Analyst Developer
