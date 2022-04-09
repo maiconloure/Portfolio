@@ -7,5 +7,4 @@
 
 <br/>
 
-### Web Developer Jr.
-Kenzie Academy Brasil
+### Analyst Developer
