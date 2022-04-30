@@ -4,4 +4,4 @@
 > 
 > Visit on  https://maiconlourenco.vercel.app/
 
-### GIT, HTML5, CSS3, Javascript, TypeScript, NodeJS, React.js, Redux, Webpack, Python, Flask, Django, SQL Server, MySQL, Postgres, Nginx, GCP, Docker, PHP, Laravel, RabbitMQ, ElasticStack, Websockets, Microsserviços, DDD, CI/CD, RegEx, Prometheus, Grafana, Chatbots com NLP e NLU.
+ GIT, HTML5, CSS3, Javascript, TypeScript, NodeJS, React.js, Redux, Webpack, Python, Flask, Django, SQL Server, MySQL, Postgres, Nginx, GCP, Docker, PHP, Laravel, RabbitMQ, ElasticStack, Websockets, Microsserviços, DDD, CI/CD, RegEx, Prometheus, Grafana, Chatbots com NLP e NLU.
